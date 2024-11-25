@@ -74,7 +74,7 @@ app.include_router(api_user_routes.user_routes, prefix="/api/user", tags=["api_u
 app.include_router(mqtt_routes.mqtt_routes, prefix="/api/mqtt", tags=["mqtt"])
 
 
-app.include_router(ws_routes.ws_routes, prefix="/api/ws_routes", tags=["WS"])
+app.include_router(ws_routes.ws_routes, prefix="/api/water_ms_routes", tags=["WS"])
 app.include_router(api_common_routes.api_common_routes, prefix="/api/common", tags=["common"])
 app.include_router(webhooks_routes.webhooks_routes, prefix="/api/webhooks", tags=["webhooks"])
 

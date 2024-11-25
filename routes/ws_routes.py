@@ -7,7 +7,7 @@ ws_routes = APIRouter()
 manager = WsConnectionManagerManyDeviceTypes()
 
 
-@ws_routes.websocket("/ws/{data_type}/{client_id}/{device_id}/{device}")
+@ws_routes.websocket("/water_station/{data_type}/{client_id}/{device_id}/{device}")
 async def websocket_endpoint(websocket: WebSocket, data_type: str, client_id: str, device_id: str, device: str):
     await manager.connect(data_type,client_id, device_id, device, websocket)
     try:

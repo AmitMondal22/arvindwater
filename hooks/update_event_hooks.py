@@ -5,7 +5,7 @@ async def update_topics():
     data = await mqtt_topic_name()
 
     # Generate EMS topic names
-    ems_topics = [("wms/" + data[i]['concatenated_string'], 0) for i in range(len(data))]
+    ems_topics = [("/water_ms/" + data[i]['concatenated_string'], 0) for i in range(len(data))]
 
     
 

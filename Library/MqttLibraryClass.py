@@ -29,7 +29,7 @@ class MqttLibraryClass:
             # if parts[0] == "ums":
             reqdata=DotDictLibrary(json.loads(msg.payload.decode('utf-8')))
             
-            asyncio.run(WeatherController.get_weather_data(reqdata,parts[1],parts[2]))
+            asyncio.run(WeatherController.get_weather_data(reqdata,parts[2],parts[3]))
         except Exception as e:
             print("Error in on_message",e)
     
